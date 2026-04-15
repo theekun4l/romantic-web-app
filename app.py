@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='static')
 number_of_count = 0
 
 @app.route('/', methods=['GET', 'POST'])
