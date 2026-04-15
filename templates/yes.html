@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She Said Yes💘</title>
+    <style>
+        body{
+            background: linear-gradient(to bottom,#ffe6eb,#ffd6e0);
+        }
+        video{
+            border-radius: 20px;}
+        h1{
+            color: #d6336c;
+            font-size: 7vw;
+            text-align: center;
+        }
+       @media only screen and (max-width:455px)
+       {
+            .cute{
+                width: 230px;
+                margin-top:100px;
+                margin-left: 70px;
+            }
+       }
+       .confetti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: pink;
+    top: 0;
+    animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+    }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted src="{{ url_for('static',filename='images/final.mp4')}}" class="cute"></video>
+    <h1>I knew you'd say yes!😌💖</h1>
+    <h1>Now you're stuck with me😏💗</h1>
+<script>
+function createConfetti() {
+  for (let i = 0; i < 80; i++) {
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.backgroundColor = `hsl(${Math.random()*360}, 70%, 70%)`;
+    confetti.style.animationDuration = (2 + Math.random() * 3) + "s";
+
+    document.body.appendChild(confetti);
+
+    setTimeout(() => {
+      confetti.remove();
+    }, 5000);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", createConfetti);
+</script>
+</body>
+</html>

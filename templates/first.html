@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Will You Be My Valentine?</title>
+
+    <style>
+        *{
+          padding: 0;
+          margin: 0;
+        }
+
+        body{
+          background-color: #ffc0cb;
+          font-family: Arial, sans-serif;
+        }
+
+        h1{
+          color: #ff4d6d;
+          margin-top: 120px;
+          font-size: 6vw;
+          text-align: center;
+        }
+
+        .first{
+          width: 200px;
+          display: block;
+          margin: 40px auto;
+        }
+
+        .form1{
+          text-align: center;
+        }
+
+        .yes_button{
+          background-color: #4CAF50;
+          color: white;
+          border:none;
+          border-radius: 12px;
+          margin: 10px 5px;
+          transition: all 0.3s ease;
+        }
+
+        .no_button{
+          background-color: #ff4d6d;
+          color: white;
+          border:none;
+          border-radius: 12px;
+          margin: 10px 5px;
+          transition: all 0.3s ease;
+        }
+
+        .yes_button:active,.no_button:active{
+          transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Will you be my valentine?💗</h1>
+
+{% if number == 0 %}
+<img class="first" src="{{ url_for('static',filename='images/first_page.jpeg')}}">
+<form method="post" class="form1">
+
+<button type="submit" name="choice" value="yes" class="yes_button"
+style="font-size: {{yes_size}}px; padding: {{yes_size / 2 | int}}px {{yes_size}}px;">
+Yes💗
+</button>
+
+<button type="submit" name="choice" value="no" class="no_button"
+style="font-size: {{no_size}}px; padding: {{no_size / 2 | int}}px {{no_size}}px;">
+No😡
+</button>
+
+</form>
+
+{% elif number == 1 %}
+<img class="first" src="{{ url_for('static',filename='images/sad_baby.jpeg')}}">
+<form method="post" class="form1">
+
+<button type="submit" name="choice" value="yes" class="yes_button"
+style="font-size: {{yes_size}}px; padding: {{yes_size / 2 | int}}px {{yes_size}}px;">
+Yes💗
+</button>
+
+<button type="submit" name="choice" value="no" class="no_button"
+style="font-size: {{no_size}}px; padding: {{no_size / 2 | int}}px {{no_size}}px;">
+Are you positive?🧐
+</button>
+
+</form>
+
+{% elif number == 2 %}
+<img class="first" src="{{ url_for('static',filename='images/sad_cat.jpeg')}}">
+<form method="post" class="form1">
+
+<button type="submit" name="choice" value="yes" class="yes_button"
+style="font-size: {{yes_size}}px; padding: {{yes_size / 2 | int}}px {{yes_size}}px;">
+Yes💗
+</button>
+
+<button type="submit" name="choice" value="no" class="no_button"
+style="font-size: {{no_size}}px; padding: {{no_size / 2 | int}}px {{no_size}}px;">
+Pookie please..🥺
+</button>
+
+</form>
+
+{% elif number == 3 %}
+<img class="first" src="{{ url_for('static',filename='images/sad_baby2.jpeg')}}">
+<form method="post" class="form1">
+
+<button type="submit" name="choice" value="yes" class="yes_button"
+style="font-size: {{yes_size}}px; padding: {{yes_size / 2 | int}}px {{yes_size}}px;">
+Yes💗
+</button>
+
+<button type="submit" name="choice" value="no" class="no_button"
+style="font-size: {{no_size}}px; padding: {{no_size / 2 | int}}px {{no_size}}px;">
+I will be very sad..😓
+</button>
+
+</form>
+
+{% elif number == 4 %}
+<img class="first" src="{{ url_for('static',filename='images/sad_cat2.jpeg')}}">
+<form method="post" class="form1">
+
+<button type="submit" name="choice" value="yes" class="yes_button"
+style="font-size: {{yes_size}}px; padding: {{yes_size / 2 | int}}px {{yes_size}}px;">
+Yes💗
+</button>
+
+<button type="submit" name="choice" value="no" class="no_button"
+style="font-size: {{no_size}}px; padding: {{no_size / 2 | int}}px {{no_size}}px;">
+Please???💔
+</button>
+
+</form>
+
+{% elif number == 5 %}
+<img class="first" src="{{ url_for('static',filename='images/sad_cat3.jpeg')}}">
+<form method="post" class="form1">
+
+<button type="submit" name="choice" value="yes" class="yes_button"
+style="font-size: {{yes_size}}px; padding: {{yes_size / 2 | int}}px {{yes_size}}px;">
+Yes💗
+</button>
+
+<button type="submit" name="choice" value="no" class="no_button"
+style="font-size: {{no_size}}px; padding: {{no_size / 2 | int}}px {{no_size}}px;">
+Don't do this to me...😭
+</button>
+
+</form>
+
+{% elif number == 6 %}
+<img class="first" src="{{ url_for('static',filename='images/sad_baby3.jpeg')}}">
+<form method="post" class="form1">
+
+<button type="submit" name="choice" value="yes" class="yes_button"
+style="font-size: {{yes_size}}px; padding: {{yes_size / 2 | int}}px {{yes_size}}px;">
+Yes💗
+</button>
+
+</form>
+
+{% endif %}
+
+</body>
+</html>
