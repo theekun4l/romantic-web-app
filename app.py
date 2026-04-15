@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+import os
 
 app = Flask(__name__)
 number_of_count = 0
@@ -27,4 +28,4 @@ def yes_page():
     return render_template('yes.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=int(os.environ.get("PORT",5000)))
